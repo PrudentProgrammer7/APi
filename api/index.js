@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 
 app.post("/webhook", (req, res) => {
     let body = req.body;
+    res.send('It works');
     
   
     console.log(`\u{1F7EA} Received webhook:`);
