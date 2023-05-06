@@ -12,7 +12,7 @@ app.post("/webhook", (req, res) => {
     let body = req.body;
     res.send('It works');
     
-  // Send a 200 OK response if this is a page webhook
+  /*// Send a 200 OK response if this is a page webhook
 
   if (body.object === "page") {
     // Returns a '200 OK' response to all requests
@@ -24,14 +24,14 @@ app.post("/webhook", (req, res) => {
     //console logs
     console.log(`\u{1F7EA} Received webhook:`);
     console.dir(body, { depth: null });
-});
+}); */
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 });
 
 // Add support for GET requests to our webhook
-app.get("/messaging-webhook", (req, res) => {
+/*app.get("/messaging-webhook", (req, res) => {
   
   // Parse the query params
     let mode = req.query["hub.mode"];
@@ -69,4 +69,4 @@ function verifyRequestSignature(req, res, buf) {
       throw new Error("Couldn't validate the request signature.");
     }
   }
-}
+}*/
