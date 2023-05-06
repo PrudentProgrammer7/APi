@@ -5,7 +5,7 @@ const port = 3000
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.sendFile('/Users/jeanbisono/Express/FbWh/api/index.html')
+  res.sendFile('/index.html')
 });
 
 app.post("/webhook", (req, res) => {
