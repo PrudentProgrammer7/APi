@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
 app.post("/webhook", (req, res) => {
     let body = req.body;
     res.send('It works');
+    //console logs
+    console.log(`\u{1F7EA} Received webhook:`);
+    console.dir(body, { depth: null });
 
 });
     
@@ -23,9 +26,6 @@ app.post("/webhook", (req, res) => {
     // Return a '404 Not Found' if event is not from a page subscription
     res.sendStatus(404);
   }
-    //console logs
-    console.log(`\u{1F7EA} Received webhook:`);
-    console.dir(body, { depth: null });
 }); */
 
 app.listen(port, () => {
